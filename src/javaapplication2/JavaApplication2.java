@@ -48,7 +48,7 @@ public class JavaApplication2 extends Frame implements ActionListener{
         
         
         lbName = new Label("Enter name:");
-        add(lbName);
+        frame.add(lbName);
         
         tfname = new TextField(40);
         add(tfname);
