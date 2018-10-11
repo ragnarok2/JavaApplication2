@@ -94,7 +94,7 @@ public class JavaApplication2 extends Frame implements ActionListener{
             int i = 0;
             System.out.println("we're connected");
             ResultSet rs = st.executeQuery("select * from student");
-            ArrayList<String> al = new ArrayList<String>();
+            ArrayList<String> al = new ArrayList<>();
             ArrayList<String> al1 = new ArrayList<String>();
             ArrayList<String> al2 = new ArrayList<String>();
             
