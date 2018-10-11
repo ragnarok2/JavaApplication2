@@ -19,54 +19,60 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Roman
  */
 public class JavaApplication2 extends Frame implements ActionListener{
-    private Label lbName;
-    private TextField tfname;
+    private JLabel lbName;
+    private JTextField tfname;
     
-    private Label lbCourse;
-    private TextField tfCourse;
-    private Label lbresult;
-    private Label lbresultset;
+    private JLabel lbCourse;
+    private JTextField tfCourse;
+    private JLabel lbresult;
+    private JLabel lbresultset;
     
     public JavaApplication2(){
         
-        Frame frame = new Frame("AWT add student");
-        frame.addWindowListener(new WindowAdapter(){
-            @Override
-            public void windowClosing(WindowEvent e){
-                System.exit(0);
-            }
-        });
         
-        frame.setVisible(true);
-        frame.setSize(500, 500);
+        JFrame frame1 = new JFrame("AWT add student");
+        
+        frame1.setVisible(true);
+        frame1.setSize(600, 600);
+        
+        JPanel jp = new JPanel();
         
         
-        lbName = new Label("Enter name:");
-        frame.add(lbName);
+        JLabel lbName = new JLabel("Enter name:");
+        jp.add(lbName);
         
-        tfname = new TextField(40);
+        tfname = new JTextField(40);
         add(tfname);
         tfname.addActionListener((ActionListener) this);
+        jp.add(tfname);
         
-        lbCourse = new Label("Enter course:");
+        lbCourse = new JLabel("Enter course:");
         add(lbCourse);
+        jp.add(lbCourse);
         
-        tfCourse = new TextField(40);
+        tfCourse = new JTextField(40);
         add(tfCourse);
+        jp.add(tfCourse);
+        
         tfCourse.addActionListener((ActionListener) this);
         
-        lbresult = new Label("Result");
+        lbresult = new JLabel("Result");
         add(lbresult);
+        jp.add(lbresult);
         
-        lbresultset = new Label();
+        lbresultset = new JLabel();
         add(lbresultset);
-        
+        jp.add(lbresultset);
         
         
         
@@ -77,8 +83,8 @@ public class JavaApplication2 extends Frame implements ActionListener{
       @SuppressWarnings("empty-statement")
 //    public label();
     public static void main(String[] args) throws ParserConfigurationException, IOException, ClassNotFoundException, SQLException{
-//        lbName = new 
-        new JavaApplication2();
+//        lbName = new
+        JavaApplication2 javaApplication2 = new JavaApplication2();
         String url="jdbc:mysql://localhost:3306/book";
         String user="root";
         String pass="1234";       
