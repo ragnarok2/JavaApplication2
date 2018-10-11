@@ -68,6 +68,8 @@ public class JavaApplication2 extends Frame implements ActionListener{
         add(lbresultset);
         
         
+        
+        
     }
     /**
      * @param args the command line arguments
