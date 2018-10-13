@@ -111,6 +111,8 @@ public class JavaApplication2 extends Frame implements ActionListener{
             for(String o : names){
                 System.out.println(o);
             }
+      
+            
             System.out.println("\n");
             courses = al1.toArray(courses);
             for(String c : courses){
@@ -136,6 +138,9 @@ public class JavaApplication2 extends Frame implements ActionListener{
         tfname.setText("");
         tfCourse.setText("");
         lbresultset.setText("Name: " + name + ", course: " + course + "!!!");
+        
+        System.out.println(name);
+        System.out.println(course);
     }
     
 }
